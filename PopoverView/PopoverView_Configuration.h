@@ -8,6 +8,14 @@
 
 #pragma mark Constants - Configure look/feel
 
+BOOL PVIsPad(void) {
+    static NSInteger isPad = -1;
+    if (isPad < 0) {
+        isPad = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) ? 1 : 0;
+    }
+    return isPad > 0;
+}
+
 // BOX GEOMETRY
 
 //Height/width of the actual arrow
@@ -83,7 +91,7 @@
 // FONTS
 
 //normal text font
-#define kTextFont [UIFont fontWithName:@"Arctika script" size:16.f]
+#define kTextFont [UIFont fontWithName:@"Arctika script" size:(PVIsPad() ? 34 : 20)]
 
 //normal text color
 #define kTextColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
