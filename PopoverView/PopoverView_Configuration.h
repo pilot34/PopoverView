@@ -34,7 +34,7 @@ BOOL PVIsPad(void) {
 #define kArrowCurvature 6.f
 
 //Minimum distance from the side of the arrow to the beginning of curvature for the box
-#define kArrowHorizontalPadding 2.f
+#define kArrowHorizontalPadding (PVIsPad() ? 5.f : 2.f)
 
 //Alpha value for the shadow behind the PopoverView
 #define kShadowAlpha 0.4f
@@ -49,7 +49,7 @@ BOOL PVIsPad(void) {
 #define kTopMargin 50.f
 
 //margin along the left and right of the box
-#define kHorizontalMargin 5.f
+#define kHorizontalMargin (PVIsPad() ? 10.f : 5.f)
 
 //padding along top of icons/images
 #define kImageTopPadding 3.f
