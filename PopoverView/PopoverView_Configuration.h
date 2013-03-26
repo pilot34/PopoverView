@@ -8,6 +8,14 @@
 
 #pragma mark Constants - Configure look/feel
 
+BOOL PVIsPad(void) {
+    static NSInteger isPad = -1;
+    if (isPad < 0) {
+        isPad = ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) ? 1 : 0;
+    }
+    return isPad > 0;
+}
+
 // BOX GEOMETRY
 
 //Height/width of the actual arrow
@@ -41,7 +49,7 @@
 #define kTopMargin 50.f
 
 //margin along the left and right of the box
-#define kHorizontalMargin 10.f
+#define kHorizontalMargin 5.f
 
 //padding along top of icons/images
 #define kImageTopPadding 3.f
@@ -53,7 +61,7 @@
 // DIVIDERS BETWEEN VIEWS
 
 //Bool that turns off/on the dividers
-#define kShowDividersBetweenViews NO
+#define kShowDividersBetweenViews YES
 
 //color for the divider fill
 #define kDividerColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:0.15f]
@@ -83,7 +91,7 @@
 // FONTS
 
 //normal text font
-#define kTextFont [UIFont fontWithName:@"HelveticaNeue" size:16.f]
+#define kTextFont [UIFont fontWithName:@"Arctika script" size:(PVIsPad() ? 50 : 30)]
 
 //normal text color
 #define kTextColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
@@ -94,7 +102,7 @@
 #define kTextAlignment UITextAlignmentCenter
 
 //title font
-#define kTitleFont [UIFont fontWithName:@"HelveticaNeue-Bold" size:16.f]
+#define kTitleFont [UIFont fontWithName:@"Arctika script" size:16.f]
 
 //title text color
 #define kTitleColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
