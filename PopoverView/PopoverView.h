@@ -29,8 +29,6 @@
     
     BOOL above;
     
-    id<PopoverViewDelegate> delegate;
-    
     UIView *parentView;
     
     UIView *topView;
@@ -55,7 +53,7 @@
 
 @property (nonatomic, retain) NSArray *subviewsArray;
 
-@property (nonatomic, assign) id<PopoverViewDelegate> delegate;
+@property (nonatomic, weak) id<PopoverViewDelegate> delegate;
 
 #pragma mark - Class Static Showing Methods
 
