@@ -19,4 +19,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/pilot34/PopoverView.git" }
   s.platform     = :ios
   s.source_files = 'PopoverView/*.{h,m}'
+  s.requires_arc = false
 end

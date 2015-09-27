@@ -14,11 +14,6 @@
 
 @implementation PopoverView
 
-@synthesize subviewsArray;
-@synthesize contentView;
-@synthesize titleView;
-@synthesize delegate;
-
 #pragma mark - Static Methods
 
 + (PopoverView *)showPopoverAtPoint:(CGPoint)point inView:(UIView *)view withText:(NSString *)text delegate:(id<PopoverViewDelegate>)delegate {

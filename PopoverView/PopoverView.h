@@ -29,33 +29,17 @@
     
     BOOL above;
     
-    id<PopoverViewDelegate> delegate;
-    
-    UIView *parentView;
-    
-    UIView *topView;
-    
-    NSArray *subviewsArray;
-    
-    NSArray *dividerRects;
-    
-    UIView *contentView;
-    
-    UIView *titleView;
-    
-    UIActivityIndicatorView *activityIndicator;
-    
     //Instance variable that can change at runtime
     BOOL showDividerRects;
 }
 
-@property (nonatomic, retain) UIView *titleView;
+@property (nonatomic, strong) UIView *titleView;
 
-@property (nonatomic, retain) UIView *contentView;
+@property (nonatomic, strong) UIView *contentView;
 
-@property (nonatomic, retain) NSArray *subviewsArray;
+@property (nonatomic, strong) NSArray *subviewsArray;
 
-@property (nonatomic, assign) id<PopoverViewDelegate> delegate;
+@property (nonatomic, weak) id<PopoverViewDelegate> delegate;
 
 #pragma mark - Class Static Showing Methods
 
