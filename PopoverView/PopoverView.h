@@ -31,15 +31,21 @@
     
     //Instance variable that can change at runtime
     BOOL showDividerRects;
+    
+    NSMutableArray *dividerRects;
+    UIView *parentView;
+    UIView *topView;
 }
 
 @property (nonatomic, strong) UIView *titleView;
 
 @property (nonatomic, strong) UIView *contentView;
 
+@property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
+
 @property (nonatomic, strong) NSArray *subviewsArray;
 
-@property (nonatomic, weak) id<PopoverViewDelegate> delegate;
+@property (nonatomic, assign) id<PopoverViewDelegate> delegate;
 
 #pragma mark - Class Static Showing Methods
 
