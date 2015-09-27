@@ -91,7 +91,7 @@ BOOL PVIsPad(void) {
 // FONTS
 
 //normal text font
-#define kTextFont [UIFont fontWithName:@"Arctika script" size:(PVIsPad() ? 34 : 20)]
+#define kTextFont [UIFont fontWithName:@"Arctika script" size:(PVIsPad() ? 34 : 30)]
 
 //normal text color
 #define kTextColor [UIColor colorWithRed:0.329 green:0.341 blue:0.353 alpha:1]
